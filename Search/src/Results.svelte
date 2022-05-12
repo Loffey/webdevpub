@@ -4,7 +4,7 @@
 </script>
 
 {#if json && "data" in json && "items" in json.data && json.data.items.length > 0}
-    <div id = "item-holder" style="transform: scale(1.2) translate(0px, -90px)">
+    <div id = "item-holder" style="transform: scale(1) translate(0px, -90px)">
         {#each json.data.items as item}
             {#if item.type=="dataverse"}
             <div id = "item">
@@ -25,7 +25,7 @@
         {/each}
     </div>
 {:else if json}
-    <div class=noresult style="transform: scale(1.2) translate(0px, -90px)"><p1>No Results Found!<br></p1>
+    <div class=noresult style="transform: scale(1) translate(0px, -90px)"><p1>No Results Found!<br></p1>
     <p2>We couldn't find what your looking for.<br> Try changing the search term.</p2></div>
 {/if}
 
